@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href = "./style.css">
+    <script>
+        function setUsername(){
+            document.getElementById("username-p").innerHTML = document.getElementById("username").value + "' s Gallery";
+        }
+
+        function setProfileImage(){
+            const url = document.getElementById("profileImg").value
+            console.log(`url(${url})`)
+            const backgroundImage = `url(${url})`
+            document.getElementById("profileImage").style.backgroundImage = backgroundImage
+        }
+
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="avatar">
+            <div class="profile-img" id="profileImage">
+            </div>
+            <div class="noti">6</div>
+        </div>
+            <div class="username">
+                <a href="https://paradoxlive.jp/en/" class="on-hover">
+                <p style="font-size: x-large;font-weight: 600px;" id="username-p">Patlapa's Gallery</p>
+                </a>
+            </div>
+        <div class="input-group">
+            <div><label style="font-weight: 600px;">Username</label><input type="text" id="username" style="margin-left: 10px;"><button 
+                id="setUsername" style="margin-left: 10px;" onclick="setUsername()">Apply</button></div>
+            <div><label style="font-weight: 600px;">Profile Image</label><input type="text" id="profileImg" style="margin-left: 10px;"><button 
+                id="setProfile" style="margin-left: 10px;" onclick="setProfileImage()">Apply</button></div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item col-span" style="background-image: url(./3rd.jpg); background-size: cover; position: center;"></div>
+            <div class="gallery-item" style="background-image: url(./UniRyu.jpg); background-size: cover;"></div>
+            <div class="gallery-item" style="background-image: url(./animeRyu.jpg); background-size: cover; background-position: center;"></div>
+            <div class="gallery-item" style="background-image: url(./ChibiRyu.jpg); background-size: cover; background-position: center;"></div>
+            <div class="gallery-item" style="background-image: url(./3yearWhite.jpg); background-size: cover; background-position: center;"></div>
+            <div class="gallery-item" style="background-image: url(./RyuHand.jpg); background-size: cover; background-position: center;"></div>
+            <div class="gallery-item" style="background-image: url(./2year.jpg); background-size: cover; background-position: center;"></div>
+            <div class="gallery-item row-span" style="background-image: url(./ryubody.webp); background-size: cover; background-position: center;"></div>
+            <div class="gallery-item" style="background-image: url(./TCWLogo.jpg); background-size: cover; background-position: center;"></div>
+            <div class="gallery-item" style="background-image: url(./Ryueye.jpg); background-size: cover; background-position: center;"></div>
+        </div>
+    </div>
+</body>
+</html>
